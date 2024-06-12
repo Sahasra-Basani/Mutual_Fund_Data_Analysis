@@ -44,7 +44,7 @@ def insert_in_stock_table(file_n):
             # Open the Excel file
             workbook = xlrd.open_workbook(file_n)
 
-            # Sheets to be read from excel
+            # Sheets to be read from Excel
             sheet_names = workbook.sheet_names()
             print(sheet_names)
 
@@ -252,7 +252,7 @@ def db_connection():
     password = config["database"]["password"]
 
     try:
-        # Connect to the PostgreSQL database
+        # Connect to the Postgres SQL database
         connection = connect_to_db(dbname, user, password, host, port)
 
         if connection:
@@ -269,6 +269,3 @@ def db_connection():
     #     # Commit changes and close the connection
     #     connection.commit()
     #     connection.close()
-
-
-

@@ -2,7 +2,7 @@ import psycopg2
 
 
 def connect_to_db(dbname, user, password, host, port):
-    """Connection to PostgreSQL database """
+    """Connection to Postgres SQL database """
 
     try:
         con = psycopg2.connect(
@@ -18,6 +18,3 @@ def connect_to_db(dbname, user, password, host, port):
     except psycopg2.Error as e:
         print("Error connecting to the database", e)
         return None
-
-
-

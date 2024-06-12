@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request, make_response
+from flask import Flask, render_template, jsonify, request
 import psycopg2
 from excel.excel_reader_All import insert_in_stock_table
 import os
@@ -9,7 +9,7 @@ with open("config.json") as f:
 
 app = Flask(__name__, template_folder='html', static_folder='assets')
 
-# PostgreSQL database configuration
+# Postgres SQL database configuration
 DB_HOST = config["database"]["host"]
 DB_NAME = config["database"]["database_name"]
 DB_USER = config["database"]["username"]
@@ -50,7 +50,8 @@ def fetch_fund_names(category):
     else:
         # Query to fetch fund names based on category
         cursor.execute("SELECT distinct(f1.fund_name) FROM mutual_fund_data.fund_details f1 "
-                       "JOIN mutual_fund_data.stock_details s1 ON s1.fund_id = f1.id WHERE s1.category = %s", (category,))
+                       "JOIN mutual_fund_data.stock_details s1 ON s1.fund_id = f1.id "
+                       "WHERE s1.category = %s", (category,))
         fund_names = [row[0] for row in cursor.fetchall()]
 
     print("fund_names:", fund_names)
