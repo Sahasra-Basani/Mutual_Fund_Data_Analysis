@@ -207,7 +207,7 @@ def compare_funds():
 
     # Convert results to JSON and return
     return jsonify(comparison_results)
-gi
+
 
 def query_fundwise_data(fund_names):
     if fund_names:
