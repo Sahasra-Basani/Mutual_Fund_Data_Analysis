@@ -1,7 +1,7 @@
 # Mutual Fund Data Analysis
 **This process involves inserting mutual fund data into the database by reading the Excel input provided by the user and identifying common stocks across different mutual funds.**
 
-## Features
+### Below are the steps and screenshots demonstrating how the process works:
 
 **1. Run Project**
 - Run the app.py file to start the project.
