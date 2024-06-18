@@ -1,5 +1,5 @@
-# Mutual_Fund_Data_Analysis
-This process includes inserting the mutual fund data in the database by reading the excel input given by user and to identify the common stocks of different mutual funds.
+# Mutual Fund Data Analysis
+**This process involves inserting mutual fund data into the database by reading the Excel input provided by the user and identifying common stocks across different mutual funds.**
 
 ## Features
 
